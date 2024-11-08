@@ -28,7 +28,7 @@ const DockerCacheDemo = () => {
       name: 'Check ingredients list', 
       icon: Package,
       explanation: 'Looking at what ingredients we need',
-      cacheExplanation: 'The ingredients list (package.json) rarely changes, so we can cache it',
+      cacheExplanation: 'The ingredients (dependencies) list (mix.exs) rarely changes, so we can cache it',
       cacheable: true, 
       baseTime: 4 
     },
@@ -153,7 +153,7 @@ const DockerCacheDemo = () => {
     <div className="bg-blue-50 p-4 rounded-lg mb-6">
       <h3 className="font-medium mb-2">👋 Let’s learn about caching</h3>
       <p className="text-sm mb-4">
-        Imagine you're planning on finding and cooking the same meal multiple times. The first time you need to:
+        Imagine you’re planning on finding and cooking the same meal multiple times. The first time you need to:
       </p>
       <ol className="text-sm mb-4 list-decimal pl-6 space-y-1">
         <li>Find and subscribe to an app</li>
@@ -164,19 +164,19 @@ const DockerCacheDemo = () => {
       </ol>
       <p className="text-sm">
         The next time you make the same meal, you already have the app and ingredients — 
-        that's like caching! You only need to read the recipe and cook.
+        that’s like caching! You only need to read the recipe and cook.
       </p>
     </div>
   );
 
   const LearnMoreSection = () => (
     <div className="mt-6 bg-gray-50 p-4 rounded-lg text-sm">
-      <h3 className="font-medium mb-2">💡 Docker Layer Caching</h3>
+      <h3 className="font-medium mb-2">💡 🐋 Docker Layer Caching</h3>
       <div className="space-y-2">
         <p>Docker builds images in layers, each layer representing a command in your Dockerfile:</p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Copying package.json first and installing dependencies in a separate layer means you won't re-install packages unless dependencies change</li>
-          <li>Copying source code in later layers ensures code changes don't invalidate dependency cache</li>
+          <li>Copying mix.exs first and installing dependencies in a separate layer means you won’t re-install packages unless dependencies change</li>
+          <li>Copying source code in later layers ensures code changes don’t invalidate dependency cache</li>
           <li>Using multi-stage builds keeps final images small while maintaining build caching benefits</li>
           <li>Layer order matters - put rarely changing steps first for optimal caching</li>
         </ul>
@@ -195,7 +195,7 @@ const DockerCacheDemo = () => {
     <Card className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          <span>🐧 Penguins Culinary School of Caching 🐧</span>
+          <span>🐧 The Penguin’s Culinary School of Caching 🐧</span>
           <div className="flex gap-2">
             <button
               onClick={() => setShowLearnMore(!showLearnMore)}
@@ -226,7 +226,7 @@ const DockerCacheDemo = () => {
           <div className="mt-4 bg-yellow-50 p-3 rounded-lg text-sm">
             <p className="flex items-center gap-2">
               <Package className="w-4 h-4" />
-              Oops! We ran out of ingredients (dependencies changed) — this will invalidate our ingredients cache. Need to go shopping again! 🛒
+              Oops! We ran out of ingredients (the dependencies changed) — this will invalidate our ingredients cache. Time to go shopping again! 🛒
             </p>
           </div>
         )}
