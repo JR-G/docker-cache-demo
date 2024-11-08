@@ -171,7 +171,7 @@ const DockerCacheDemo = () => {
 
   const LearnMoreSection = () => (
     <div className="mt-6 bg-gray-50 p-4 rounded-lg text-sm">
-      <h3 className="font-medium mb-2">💡 🐋 Docker Layer Caching</h3>
+      <h3 className="text-lg font-bold mb-2">💡 🐋 Docker Layer Caching</h3>
       <div className="space-y-2">
         <p>Docker builds images in layers, each layer representing a command in your Dockerfile:</p>
         <ul className="list-disc pl-4 space-y-1">
@@ -195,7 +195,7 @@ const DockerCacheDemo = () => {
     <Card className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          <span>🐧 The Penguin’s Culinary School of Caching 🐧</span>
+          <span>The Penguin’s Culinary School of Caching 🐧</span>
           <div className="flex gap-2">
             <button
               onClick={() => setShowLearnMore(!showLearnMore)}
