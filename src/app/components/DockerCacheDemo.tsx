@@ -195,7 +195,7 @@ const DockerCacheDemo = () => {
     <Card className="w-full max-w-2xl">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          <span>Penguins Culinary School of Caching</span>
+          <span>🐧 Penguins Culinary School of Caching 🐧</span>
           <div className="flex gap-2">
             <button
               onClick={() => setShowLearnMore(!showLearnMore)}
