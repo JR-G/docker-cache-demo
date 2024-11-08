@@ -22,7 +22,7 @@ const DockerCacheDemo = () => {
       explanation: 'Finding and subscribing to a recipe & cooking guide app',
       cacheExplanation: 'This can be cached because the recipe & cooking guide app (application structure) stays the same between builds',
       cacheable: true, 
-      baseTime: 7
+      baseTime: 6
     },
     { 
       name: 'Check ingredients list', 
@@ -38,7 +38,7 @@ const DockerCacheDemo = () => {
       explanation: 'Go out and buy all the ingredients from the store',
       cacheExplanation: 'Once we have our ingredients (dependencies), we can reuse them',
       cacheable: true, 
-      baseTime: 10 
+      baseTime: 7 
     },
     { 
       name: 'Review recipe updates', 
@@ -83,7 +83,7 @@ const DockerCacheDemo = () => {
       return step.baseTime;
     }
     
-    return 1;
+    return 0.5;
   };
 
   const runStep = async (stepIndex: number) => {
