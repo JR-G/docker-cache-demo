@@ -44,7 +44,7 @@ const DockerCacheDemo = () => {
       name: 'Review recipe updates', 
       icon: FileCode,
       explanation: 'Checking if any steps have changed, like how long you should leave it to simmer',
-      cacheExplanation: "We can't cache this because our recipe (code) changes frequently",
+      cacheExplanation: "We can’t cache this because our recipe (code) changes frequently",
       cacheable: false, 
       baseTime: 4 
     },
@@ -52,7 +52,7 @@ const DockerCacheDemo = () => {
       name: 'Cook the meal', 
       icon: Cog,
       explanation: 'Following the recipe to make the dish',
-      cacheExplanation: "We need to cook (build) fresh each time to ensure everything's correct",
+      cacheExplanation: "We need to cook (build) fresh each time to ensure everything’s correct",
       cacheable: false, 
       baseTime: 3 
     }
@@ -90,7 +90,7 @@ const DockerCacheDemo = () => {
     return new Promise((resolve) => {
       const step = steps[stepIndex];
       const duration = getStepTime(step, stepIndex);
-      let startTime = Date.now();
+      const startTime = Date.now();
       
       const updateProgress = () => {
         const elapsed = Date.now() - startTime;
@@ -151,7 +151,7 @@ const DockerCacheDemo = () => {
 
   const IntroMessage = () => (
     <div className="bg-blue-50 p-4 rounded-lg mb-6">
-      <h3 className="font-medium mb-2">👋 Let's learn about caching</h3>
+      <h3 className="font-medium mb-2">👋 Let’s learn about caching</h3>
       <p className="text-sm mb-4">
         Imagine you're planning on finding and cooking the same meal multiple times. The first time you need to:
       </p>
